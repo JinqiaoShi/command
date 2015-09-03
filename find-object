@@ -1,0 +1,9 @@
+roslaunch rbx2_bringup grasping_pi_robot_no_base.launch sim:=true
+roslaunch rbx2_diagnostics monitor_dynamixels.launch
+roslaunch rbx2_vision openni_node.launch
+rosrun image_view image_view image:=/camera/rgb/image_raw
+roslaunch grasping_pi_robot_moveit_config move_group.launch
+rosrun rviz rviz -d `rospack find rbx2_arm_nav`/config/real_pick_and_place.rviz
+roslaunch rbx2_gazebo ubr1_perception.launch
+rosrun rbx2_arm_nav real_pick_and_place.py --objects
+rosrun rbx2_arm_nav moveit_obstacles_demo.py

@@ -1,0 +1,2 @@
+roslaunch hector_imu_attitude_to_tf example.launch
+rosrun rviz rviz

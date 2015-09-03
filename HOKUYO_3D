@@ -1,0 +1,7 @@
+roslaunch laser3D laser3D.launch
+rosrun laser3D bin_cliente
+cd '/home/exbot/my_pcl/cloudview/src' 
+
+./cloud_viewer '/home/exbot/rosbuild_ws/sandbo/laser3D/bin/nube.pcd'
+rostopic echo /motor_pos
+rosrun laser3D bin_client_dynamixel

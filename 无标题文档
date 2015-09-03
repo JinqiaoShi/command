@@ -1,0 +1,16 @@
+roslaunch openni_launch openni.launch   kinect for windows
+roslaunch turtlebot_arm_bringup arm.launch
+roslaunch turtlebot_bringup 3dsensor.launch
+roslaunch turtlebot_bringup minimal.launch
+roslaunch turtlebot_rviz_launchers view_robot.launch  
+
+rosrun arbotix_python arbotix_gui
+
+rviz kinect arm bringup roscore
+roslaunch moveit_setup_assistant setup_assistant.launch
+
+export ROS_MASTER_URI=http://robot:11311
+export ROS_HOSTNAME=ubuntu
+
+rosrun rospy_tutorials listener.py
+

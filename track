@@ -1,0 +1,6 @@
+roslaunch rbx2_bringup pi_robot_with_gripper.launch sim:=false
+roslaunch pi_robot_moveit_config move_group.launch
+rosrun rviz rviz -d `rospack find rbx2_utils`/fake_target.rviz
+roslaunch rbx2_utils pub_3d_target.launch speed:=0.2
+roslaunch rbx2_dynamixels head_tracker.launch sim:=false
+rosrun rbx2_arm_nav arm_tracker.py _sync:=false

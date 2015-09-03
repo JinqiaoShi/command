@@ -1,0 +1,25 @@
+sudo chmod a+rw /dev/bus/usb/001/004
+roslaunch dji_sdk sdk_demo.launch
+rosrun GuidanceRos GuidanceNode
+rostopic  echo /microstrain/imu
+
+roslaunch loam_continuous loam_continuous.launch
+rosbag play '/home/exbot/rosbuild_ws/sandbo/loam_continuous/robot_city_bridge.bag'
+rqt_graph
+rostopic echo /laser_cloud_last
+ rosrun rqt_tf_tree rqt_tf_tree
+
+
+
+
+
+
+
+
+
+
+
+sudo sh -c 'echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"fff0\", ATTR{idProduct}==\"d009\", MODE=\"0666\", GROUP=\"dialout\"" > /etc/udev/rules.d/51-guidance.rules'
+sudo chmod a+rx /etc/udev/rules.d/51-guidance.rules
+sudo service udev restart
+重启

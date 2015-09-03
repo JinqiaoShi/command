@@ -1,0 +1,7 @@
+
+gitinit
+git add ./
+//git status
+git commit -m "my first version"
+git remote add origin git@github.com:shijinqiao/仓库.git     
+git push -u origin master

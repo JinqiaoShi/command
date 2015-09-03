@@ -1,0 +1,8 @@
+roslaunch rbx2_bringup pi_robot_with_gripper.launch sim:=false
+roslaunch openni2_launch openni2.launch
+
+roslaunch rbx2_vision nearest_cloud.launch
+rosrun rviz rviz -d `rospack find rbx2_vision`/config/track_potcloud.rviz
+roslaunch rbx2_dynamixels head_tracker.launch sim:=false
+
+

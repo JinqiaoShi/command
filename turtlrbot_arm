@@ -1,0 +1,10 @@
+roslaunch rbx1_bringup fake_turtlebot.launch
+roslaunch turtlebot_rviz_launchers view_robot.launch
+roslaunch turtlebot_arm_moveit_config move_group.launch
+
+ rosrun turtlebot_arm_moveit_demos pick_and_place.py
+
+
+roslaunch rbx1_bringup fake_turtlebot.launch
+rosrun turtlebot_arm_moveit_demos pick_and_place.py
+roslaunch turtlebot_arm_moveit_config turtlebot_arm_moveit.launch sim:=false --screen

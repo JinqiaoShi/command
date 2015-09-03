@@ -1,0 +1,5 @@
+roslaunch rbx1_bringup turtlebot_minimal_create.launch
+roslaunch rbx1_bringup odom_ekf.launch
+roslaunch rbx1_nav fake_move_base_obstacle.launch
+rosrun rviz rviz -d `rospack find rbx1_nav`/nav.rviz
+rosrun rbx1_nav move_base_square.py

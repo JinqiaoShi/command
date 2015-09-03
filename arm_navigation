@@ -1,0 +1,5 @@
+roslaunch rbx2_bringup pi_robot_with_gripper.launch sim:=false
+roslaunch pi_robot_moveit_config move_group.launch
+rosrun rviz rviz -d `rospack find rbx2_arm_nav`/config/arm_nav.rviz
+rosrun rbx2_arm_nav moveit_obstacles_demo.py _sync:=false
+

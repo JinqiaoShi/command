@@ -1,0 +1,45 @@
+sudo chmod a+rw /dev/ttyACM0
+sudo mv Download/jdk-6u26-linux-x64.bin /opt
+ln -s /home/exbot/软件/arduino/arduino   /usr/local/bin/
+sudo usermod -aG dialout exbot   添加用户组
+usermod -g 组名 用户名：更改用户所属组，是覆盖； 小写 是 覆盖
+usermod -G 组名1[，组名2，……] 用户名：添加用户所属组； 大写 是添加 usermod -G 组名 用户名
+
+
+
+rospack list 列出包
+rosdep install scan_tools 安装scan_tools所有依赖
+git checkout hydro-devel  选择hydro版本
+git clone -b <branch> <remote_repo> 
+
+
+sudo rm -rf /opt/ros/indigo/share/arbotix_sensors
+sudo mv /home/exbot/Downloads/arbotix_ros-indigo-devel/arbotix_sensors /opt/ros/indigo/share
+
+git-svn clone
+apt-get update 
+sudo apt-get install -f
+rosrun xacro xacro.py -o model.urdf model.urdf.xacro
+
+ rosclean purge//清除日志
+catkin_make -DCATKIN_WHITELIST_PACKAGES="package1;package2"
+
+
+linux cmake编译方法
+
+建立项目目录 资源目录 CMAKELIST放在项目目录 源文件放资源目录 运行CMAKE..在运行make
+
+collect2: error: ld returned 1 exit status   出现这个问题一半时链接库出问题
+
+ps -ef | grep qq //杀死进程
+kill -s 9 1254
+
+
+
+8. Make an alias to point to the vpn command, so that you only have to
+   type, "vpn" to start it.  Insert the following line into either your
+   ~/.bashrc or ~/.bash_aliases file:
+
+   alias vpn='/opt/cisco/anyconnect/bin/vpn'
+
+

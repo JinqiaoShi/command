@@ -1,0 +1,4 @@
+roslaunch rosbridge_server rosbridge_websocket.launch
+roslaunch dji_sdk sdk_demo.launch
+rqt_graph
+
